@@ -7,7 +7,7 @@ const navbar = () => {
 
     nav_mob.addEventListener('click', () => {
         nav_container_mob.classList.toggle('nav-container-mob-active');
-        body.classList.add('fix-body');
+        body.classList.toggle('fix-body');
 
         navLi.forEach((link, index) => {
             link.style.animation = `nav-animation 1s ease forwards ${index/6}s`;

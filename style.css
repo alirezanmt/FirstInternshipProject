@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow: visible;
+}
+
 .nav-container {
     display: flex;
     flex-direction: row;
