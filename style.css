@@ -1,9 +1,26 @@
 /* general style */
 
+@font-face {
+    font-family: 'vazir';
+    /*تعریف یک نام برای فونت*/
+    src: url('fonts/vazir-font-v16.1.0/Vazir.eot');
+    /*اکسپلورر 9 به بعد*/
+    src: local('vazir'), /*بررسی نصب بودن فونت در سیستم کاربر*/
+    local('vazir'), /*برای برخی از مرورگرها مانند سافاری*/
+    url('fonts/vazir-font-v16.1.0/Vazir.eot?#iefix') format('embedded-opentype'), /*هک برای اکسپلورر 8 و ماقبل*/
+    url('fonts/vazir-font-v16.1.0/Vazir.woff') format('woff'), /*مرورگر های جدید*/
+    url('fonts/vazir-font-v16.1.0/Vazir.ttf') format('truetype'), /*تمام مرورگرها به جزء اکسپلورر*/
+    url('fonts/vazir-font-v16.1.0/Vazir.svg#Vazir') format('svg');
+    /*نسخه های قدیمی سیستم عامل iOS*/
+    font-style: normal;
+    font-weight: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: vazir;
 }
 
 body {
@@ -64,7 +81,11 @@ body {
 .nav-container ul li a {
     text-decoration: none;
     color: #666666;
-    font-size: 1em;
+    font-size: 0.8em;
+}
+
+.nav-container ul li a:hover {
+    color: #173264;
 }
 
 .logo {
@@ -73,18 +94,20 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    height: 5em;
-    width: 12em;
+    height: 7em;
+    width: 12vw;
     font-size: 0.8em;
 }
 
 .logo img {
-    height: 100%;
+    max-width: 30%;
+    height: auto;
 }
 
 .logo p {
     direction: rtl;
-    line-height: 2em;
+    line-height: 1.8em;
+    font-size: 0.8em;
 }
 
 .logo p span {
@@ -260,10 +283,10 @@ body {
 }
 
 .sub-sec-1-btn-firstchild {
-    border: 1px solid blue;
+    border: 1px solid rgb(61, 119, 173);
     border-radius: 6px;
     background-color: white;
-    color: teal;
+    color: rgb(35, 145, 145);
     cursor: pointer;
     height: 2.5em;
     width: 10em;
@@ -271,9 +294,9 @@ body {
 }
 
 .sub-sec-1-btn-scondchild {
-    border: 1px solid rgb(128, 172, 202);
+    border: 1px solid rgb(149, 207, 220);
     border-radius: 6px;
-    background-color: rgb(128, 172, 202);
+    background-color: rgb(149, 207, 220);
     color: white;
     cursor: pointer;
     height: 2.5em;
@@ -323,8 +346,8 @@ body {
 
 .sub-sec-2 h2 {
     margin-bottom: 1em;
-    color: darkcyan;
-    border-right: 3px solid blue;
+    color: rgb(56, 100, 209);
+    border-right: 3px solid rgb(56, 100, 209);
     border-radius: 2px;
     padding-right: 0.5em;
 }
@@ -386,6 +409,7 @@ body {
 .sec-3-box-1 {
     grid-column: 1/6;
     justify-self: end;
+    color: rgb(56, 100, 209);
 }
 
 .sec-3-box-2 {
@@ -394,22 +418,109 @@ body {
 
 .sec-3-box-2>h3 {
     direction: rtl;
+    margin-bottom: 1em;
 }
 
 .sec-3-box-2>p {
     direction: rtl;
     text-align: justify;
     text-justify: inter-word;
+    margin-bottom: 1.5em;
+    font-size: 0.9em;
+}
+
+.sec-3-box-2>div {
+    /* border-right: 2px solid rgb(92, 87, 87); */
+}
+
+.sec-3-box-2>div>div {
+    /* border-right: 2px solid rgb(92, 87, 87); */
+    position: relative;
+}
+
+.sec-3-box-2>div h5 {
+    direction: rtl;
+    padding-top: 1.5em;
+    padding-right: 1em;
+    font-size: 1em;
+    border-right: 2px solid rgb(92, 87, 87);
+}
+
+.sec-3-box-2>div p {
+    direction: rtl;
+    padding-right: 3em;
+    border-right: 2px solid rgb(92, 87, 87);
+    font-size: 0.9em;
+}
+
+#third-step {
+    border: none;
+}
+
+.down1 {
+    position: absolute;
+    right: -15px;
+    top: -1px;
+    /* display: none; */
+}
+
+.down2 {
+    position: absolute;
+    right: -15px;
+    top: 8px;
+    /* display: none; */
+}
+
+.checked {
+    position: absolute;
+    right: -20px;
+    top: 16px;
+    transform: scale(0.7);
+    /* display: none; */
 }
 
 .sec-3-box-3 {
     grid-column: 4/6;
     display: grid;
     grid-template: 1fr 1fr/ 1fr 1fr;
-    grid-gap: 2em;
+    grid-gap: 1em;
+    justify-items: end;
+    align-items: start;
+}
+
+.sec-3-box-3 div {
+    /* background-color: chocolate; */
 }
 
 .sec-3-box-3 img {
     max-width: 100%;
     height: auto;
+}
+
+@media screen and (max-width:691px) {
+    .sec-3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 5fr;
+        grid-gap: 2em;
+        margin-top: 20vh;
+        padding: 0 10vw;
+    }
+    .sec-3-box-1 {
+        grid-column: 1/2;
+        justify-self: end;
+    }
+    .sec-3-box-2 {
+        grid-column: 1/2;
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .sec-3-box-3 {
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        /* background-color: cyan; */
+        justify-items: center;
+        align-items: start;
+        grid-area: 2 / 1 / 3 / 2;
+    }
 }
