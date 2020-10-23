@@ -531,7 +531,7 @@ body {
 }
 
 .sec-4 img {
-    max-width: 60%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -539,6 +539,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    max-width: 45%;
 }
 
 .sub-sec-4 h3 {
@@ -597,7 +598,9 @@ body {
         max-width: 80%;
         height: auto;
     }
-    .sub-sec-4 {}
+    .sub-sec-4 {
+        max-width: 90%;
+    }
     .sub-sec-4 h3 {}
     .sub-sec-4 p {}
     .input-num {
@@ -606,6 +609,7 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        padding: 0.4em 0.5em;
     }
     .input-num input {
         min-width: 75%;
@@ -617,5 +621,96 @@ body {
     }
     .sec-4-labels img {
         margin-bottom: 1em;
+    }
+}
+
+
+/* section 5 */
+
+.sec-5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20vh 10vw 2vh 10vw;
+    background-color: white;
+    padding: 3em 3em 0em 1em;
+    border-radius: 20px;
+    box-shadow: rgba(151, 167, 187, 0.2) 0px 7px 29px 0px;
+}
+
+.sec-5 img {
+    max-width: 40%;
+    height: auto;
+}
+
+.sub-sec-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 55%;
+}
+
+.sub-sec-5 h3 {
+    direction: rtl;
+    color: rgb(68, 109, 185);
+    margin-bottom: 1em;
+    border-right: 3px solid rgb(24, 160, 24);
+    border-radius: 2px;
+    padding-right: 1em;
+}
+
+.sub-sec-5 p {
+    direction: rtl;
+    color: rgb(155, 155, 155);
+    margin-bottom: 2em;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.input-num-5 {
+    direction: rtl;
+    margin-bottom: 2em;
+    padding: 0.4em 0.5em;
+    background-color: rgb(232, 232, 232);
+    border-radius: 5px;
+}
+
+.input-num-5 input {
+    border: none;
+    background-color: rgb(232, 232, 232);
+}
+
+.input-num-5 button {
+    background-color: rgb(2, 137, 255);
+    border: none;
+    padding: 0.5em 1.2em;
+    border-radius: 10px;
+    color: white;
+}
+
+@media screen and (max-width:691px) {
+    .sec-5 {
+        flex-direction: column;
+        align-items: center;
+        padding: 3em 1em 1em 1em;
+    }
+    .sec-5 img {
+        max-width: 60%;
+        height: auto;
+    }
+    .sub-sec-5 {
+        max-width: 90%;
+        margin-top: 2em;
+        align-items: center;
+    }
+    .sub-sec-5 h3 {}
+    .sub-sec-5 p {}
+    .input-num-5 {}
+    .input-num-5 input {
+        max-width: 62%;
+    }
+    .input-num-5 button {
+        max-width: 35%;
+        font-size: 0.7em;
     }
 }
