@@ -714,3 +714,57 @@ body {
         font-size: 0.7em;
     }
 }
+
+
+/* section 6 */
+
+.sec-6 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10em;
+    justify-content: space-around;
+    align-items: center;
+    background-color: cornflowerblue;
+    padding: 1.5em 4em;
+}
+
+.sec-6 img {
+    max-width: 30%;
+    height: auto;
+}
+
+.sec-6 p {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: 2em;
+    color: white;
+    font-size: 0.7em;
+}
+
+.sec-6 h4 {
+    max-width: 20%;
+    color: white;
+}
+
+@media screen and (max-width:691px) {
+    .sec-6 {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .sec-6 img {
+        max-width: 60%;
+        height: auto;
+    }
+    .sec-6 p {
+        max-width: 70%;
+        color: white;
+        font-size: 0.7em;
+        margin: auto;
+        margin-bottom: 1.5em;
+    }
+    .sec-6 h4 {
+        max-width: 60%;
+        color: white;
+        margin-bottom: 1.5em;
+    }
+}
