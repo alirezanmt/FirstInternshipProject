@@ -50,6 +50,18 @@ body {
     margin: 2px;
 }
 
+.rotate .line1 {
+    transform: rotate(45deg) translate(1px, 5px);
+}
+
+.rotate .line2 {
+    opacity: 0;
+}
+
+.rotate .line3 {
+    transform: rotate(-45deg) translate(2px, -6px);
+}
+
 .nav-container button {
     border: none;
     color: rgb(77, 172, 255);
@@ -507,7 +519,7 @@ body {
     }
     .sec-3-box-3>div {}
     .sec-3-box-3 img {
-        max-width: 100%;
+        max-width: 70%;
         height: auto;
     }
 }
